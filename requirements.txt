@@ -1,1 +1,2 @@
-tweepy>=3.0.0
+tweepy>=3.5.0
+markovify>=0.4.0

@@ -7,7 +7,7 @@ import markovify
 import random
 import tweepy
 from time import sleep
-from secrets_json import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET
+from secrets import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_SECRET
 
 TWEET_INTERVAL = 60 * 15 # time in seconds
 
@@ -21,7 +21,6 @@ def make_title():
         # add a parentheses suffix to the title
         first_len = random.randrange(20,120)
         second_len = random.randrange(16, 140 - first_len)
-        
         first_part = text_model.make_short_sentence(first_len,tries=100)
         second_part = text_model.make_short_sentence(second_len,tries=100)
         title = first_part + " (" + second_part + ")"
